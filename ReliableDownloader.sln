@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReliableDownloader", "ReliableDownloader\ReliableDownloader.csproj", "{4BDB7EC8-D136-4B9E-A978-D7A0356F0DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReliableDownloader.Tests", "ReliableDownloader.Tests\ReliableDownloader.Tests.csproj", "{F1F405A4-D9E2-4920-ADD8-CEBCC3BAE810}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BDB7EC8-D136-4B9E-A978-D7A0356F0DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDB7EC8-D136-4B9E-A978-D7A0356F0DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDB7EC8-D136-4B9E-A978-D7A0356F0DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDB7EC8-D136-4B9E-A978-D7A0356F0DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F405A4-D9E2-4920-ADD8-CEBCC3BAE810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F405A4-D9E2-4920-ADD8-CEBCC3BAE810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F405A4-D9E2-4920-ADD8-CEBCC3BAE810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F405A4-D9E2-4920-ADD8-CEBCC3BAE810}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
