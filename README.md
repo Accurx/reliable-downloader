@@ -1,6 +1,10 @@
 # 👩‍⚕️ Reliable Downloader Exercise 🖥️
 
-Thank you for investing your time in our take home exercise. We've based this exercise on a real problem we've had to solve in order to be able to release software to many hundreds of thousands of clinicians multiple times a week. We hope you enjoy it and find it relevant.
+Thank you for investing your time in our take home exercise.
+
+We've based this exercise on a real problem we've had to solve in order to be able to release our [desktop software](https://www.youtube.com/channel/UCrLJDyngP4p0G0JtgEoT66Q/videos), which allows clinicians to communicate with patients over text, video, questionnaires and do a whole bunch more besides!, to many hundreds of thousands of users multiple times a week.
+
+We hope you enjoy it and find it relevant.
 
 Stumbled upon this repo? [Find out more about accuRx](https://www.accurx.com/careers)
 
@@ -23,15 +27,17 @@ Thanks for your time, we hope you enjoy the exercise and please do get in touch 
 
 To release software to many hundreds of thousands of clinicians multiple times a week, our component for downloading updates needs to be reliable in the challenging networking conditions clinicians can face: intermittent internet disconnection and slow internet speeds.
 
-Performing a normal GET on a file won't be reliable for two reasons. Firstly, we need to be able to recover from internet disconnections. Secondly, we need to not have to start from scratch every time, with intermittent internet disconnection and slow internet, it's unlikely we'll be able to download the whole file in one go.
+Your core task is to extend the skeleton project to meet the following requirements:
 
-Luckily, some CDNs support downloading partial content so if we can get part of the way through, we can resume from this point.
+- Performing a normal GET on a file won't be reliable for two reasons. Firstly, we need to be able to recover from internet disconnections. Secondly, we need to not have to start from scratch every time, with intermittent internet disconnection and slow internet, it's unlikely we'll be able to download the whole file in one go.
 
-If the URL does not support partial content then we attempt to just download the whole file.
+- Luckily, some CDNs support downloading partial content so if we can get part of the way through, we can resume from this point.
 
-Clinicians need to eventually receive new updates as they're sent out, even if it takes many attempts due to their internet connection. Your solution needs to recover from failures and should not exit until the file has been successfully downloaded.
+- If the URL does not support partial content then we attempt to just download the whole file.
 
-Your core task is to extend the skeleton project to meet the requirements above and demonstrate:
+- Clinicians need to eventually receive new updates as they're sent out, even if it takes many attempts due to their internet connection. Your solution needs to recover from failures and should not exit until the file has been successfully downloaded.
+
+We are looking for you to demonstrate:
 
 - Analysing requirements
 - Solving problems
