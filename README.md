@@ -19,7 +19,7 @@ Please answer the following questions in `questions.md`.
 - How long did you spend on the exercise?
 - What would you add if you had more time and how?
 
-When you're finished, please share your solution by inviting us to a private repository (accurx-ravi, CalumJEadie, emma-accurx, humayra-accurx, JafarMiles-AccuRx, jsheardAccurx, Luke-de-B, mattlowe1 and max-jacobs) containing your solution and using the link in your invite email to submit a link to the repository.
+When you're finished, please share your solution by inviting us to a private repository (accurx-ravi, CalumJEadie, emma-accurx, humayra-accurx, JafarMiles-AccuRx, jsheardAccurx, Luke-de-B, mattlowe1, jimbo-accurx and max-jacobs) containing your solution and using the link in your invite email to submit a link to the repository.
 
 Thanks for your time, we hope you enjoy the exercise and please do get in touch if you have any questions!
 
