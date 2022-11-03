@@ -2,7 +2,7 @@
 
 Thank you for investing your time in our take home exercise.
 
-We've based this exercise on a real problem we've had to solve in order to be able to release our [desktop software](https://www.youtube.com/channel/UCrLJDyngP4p0G0JtgEoT66Q/videos), which allows clinicians to communicate with patients over text, video, questionnaires and do a whole bunch more besides!, to many hundreds of thousands of users multiple times a week.
+We've based this exercise on a real problem we've had to solve in order to be able to release our [desktop software](https://www.youtube.com/channel/UCrLJDyngP4p0G0JtgEoT66Q/videos), which allows clinicians to communicate with patients over text, video, questionnaires, and other methods to many hundreds of thousands of users multiple times a week.
 
 We hope you enjoy it and find it relevant.
 
