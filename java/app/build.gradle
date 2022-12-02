@@ -20,7 +20,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 
     implementation 'com.google.guava:guava:31.1-jre'
-    implementation group: 'org.springframework', name: 'spring-webflux', version: '6.0.2'
+    implementation 'io.projectreactor.netty:reactor-netty:1.1.0'
+    implementation 'org.springframework:spring-webflux:6.0.2'
 }
 
 application {
