@@ -3,21 +3,9 @@
  */
 package com.accurx.reliabledownloader;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.web.reactive.function.client.WebClient;
-
 public class App {
-    public String getGreeting() {
-        WebClient.create("").head()
-                .uri("/employees")
-                .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .retrieve();
-        return "Hello World!";
-
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println("Hello, world");
     }
 }

@@ -1,11 +1,12 @@
 package com.accurx.reliabledownloader;
 
-import org.springframework.web.reactive.function.client.WebClient;
+import java.net.http.HttpResponse;
+import java.util.concurrent.CompletableFuture;
 
 public interface WebSystemCalls {
-    WebClient.ResponseSpec GetHeaders(String url);
+    CompletableFuture<HttpResponse<Void>> GetHeaders(String url);
 
-    WebClient.ResponseSpec DownloadContent(String url);
+    CompletableFuture<HttpResponse<byte[]>> DownloadContent(String url);
 
-    WebClient.ResponseSpec DownloadPartialContent(String url, long from, long to);
+    CompletableFuture<HttpResponse<byte[]>> DownloadPartialContent(String url, long from, long to);
 }
