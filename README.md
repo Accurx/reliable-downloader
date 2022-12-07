@@ -6,7 +6,7 @@ We've based this exercise on a real problem we've had to solve in order to be ab
 
 We hope you enjoy it and find it relevant.
 
-Stumbled upon this repo? [Find out more about accuRx](https://www.accurx.com/careers)
+Stumbled upon this repo? [Find out more about Accurx](https://www.accurx.com/careers)
 
 The purpose of this exercise is for us to learn about how you analyse requirements, solve problems, use language features appropriately, structure code and verify your solution works correctly. These are the main factors we take into account when assessing your solution.
 
@@ -49,7 +49,7 @@ There is already a ```IWebSystemCalls.cs``` and corresponding implementation whi
 
 As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the http header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
 
-A test project is included (with Nunit added though can be swapped for XUnit) if Unit tests are wanted. There is also a Program Main function which has a real accuRx url (which DOES support partial content) and an example of a file path so that the code can be tested for real.
+A test project is included (with Nunit added though can be swapped for XUnit) if Unit tests are wanted. There is also a Program Main function which has a real Accurx url (which DOES support partial content) and an example of a file path so that the code can be tested for real.
 
 Optional extension tasks are:
 
