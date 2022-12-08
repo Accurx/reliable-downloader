@@ -2,17 +2,16 @@
 using System.Threading.Tasks;
 using ReliableDownloader;
 
-namespace ReliableDownloader
+namespace ReliableDownloader;
+
+internal class Program
 {
-    internal class Program
+    public static async Task Main(string[] args)
     {
-        public static async Task Main(string[] args)
-        {
-            // If this url 404's, you can get a live one from https://installer.demo.accurx.com/chain/latest.json.
-            var exampleUrl = "https://installer.demo.accurx.com/chain/3.182.57641.0/accuRx.Installer.Local.msi";
-            var exampleFilePath = "C:/Users/[USER]/myfirstdownload.msi";
-            var fileDownloader = new FileDownloader();
-            await fileDownloader.DownloadFile(exampleUrl, exampleFilePath, progress => { Console.WriteLine($"Percent progress is {progress.ProgressPercent}"); });
-        }
+        // If this url 404's, you can get a live one from https://installer.demo.accurx.com/chain/latest.json.
+        var exampleUrl = "https://installer.demo.accurx.com/chain/3.182.57641.0/accuRx.Installer.Local.msi";
+        var exampleFilePath = "C:/Users/[USER]/myfirstdownload.msi";
+        var fileDownloader = new FileDownloader();
+        await fileDownloader.DownloadFile(exampleUrl, exampleFilePath, progress => { Console.WriteLine($"Percent progress is {progress.ProgressPercent}"); });
     }
 }
