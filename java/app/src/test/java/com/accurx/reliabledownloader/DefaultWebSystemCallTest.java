@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class DefaultWebSystemCallTest {
 
     @Test
-    public void When_HeadRequested_HeadersReceived() {
+    public void Test1() {
         assertTrue(true);
     }
 

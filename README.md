@@ -45,11 +45,25 @@ We are looking for you to demonstrate:
 - Structuring code
 - Verifying your solution works correctly
 
+We currently support submissions in either .NET (C#) or Java and have included skeleton projects for both.
+
+### .NET 
+
 There is already a ```IWebSystemCalls.cs``` and corresponding implementation which allows you to get the http headers for a URL, download the whole content or download the partial content. All these calls return ```HttpResponseMessage``` which contains sub properties for headers and the content to be read as a string/stream etc.
 
 As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the http header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
 
 A test project is included (with Nunit added though can be swapped for XUnit) if Unit tests are wanted. There is also a Program Main function which has a real Accurx url (which DOES support partial content) and an example of a file path so that the code can be tested for real.
+
+### Java
+
+There is already a ```WebSystemCalls.java``` and corresponding implementation which allows you to get the http headers for a URL, download the whole content or download the partial content. All these calls return an ```HttpResponse``` object, which contains sub properties for headers and the content.
+
+As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the http header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
+
+A test project is included (with JUnit added though can be swapped for an alternative) if Unit tests are wanted. There is also an App Main function which has a real Accurx url (which DOES support partial content) and an example of a file path so that the code can be tested for real.
+
+## Extension tasks (optional)
 
 Optional extension tasks are:
 
