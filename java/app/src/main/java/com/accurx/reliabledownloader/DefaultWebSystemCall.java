@@ -6,6 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 
 public class DefaultWebSystemCall implements WebSystemCalls {
 
@@ -26,7 +27,8 @@ public class DefaultWebSystemCall implements WebSystemCalls {
                 .timeout(Duration.ofMinutes(2))
                 .GET()
                 .build();
-        return client.sendAsync(request, HttpResponse.BodyHandlers.ofByteArray());
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofByteArray())
+            .orTimeout(2, TimeUnit.MINUTES);
     }
 
     @Override
@@ -36,6 +38,7 @@ public class DefaultWebSystemCall implements WebSystemCalls {
                 .header("Range", String.format("bytes=%s-%s", from, to))
                 .GET()
                 .build();
-        return client.sendAsync(request, HttpResponse.BodyHandlers.ofByteArray());
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofByteArray())
+            .orTimeout(2, TimeUnit.MINUTES);
     }
 }
