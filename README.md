@@ -34,10 +34,8 @@ Your solution should meet the following core requirements:
 - Implement partial downloading so that we don’t need to start from scratch every time, if the CDN supports this.
 - Implement downloading the file in one go, if the CDN does not support partial downloading.
 - Recover from failures and not exit until the file has been successfully downloaded, as clinicians need to eventually receive new updates as they're sent out, even if it takes many attempts due to their internet connection. 
-- Check the integrity of the file after downloading. We can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
+- Check the integrity of the file after downloading and delete the file if this check fails. We can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
 - Report progress to the user during this process.
-
-Optional extension tasks are:
 - Add the ability to cancel so the user can stop any in progress downloads.
 
 
