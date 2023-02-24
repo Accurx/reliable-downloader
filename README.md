@@ -8,7 +8,7 @@ We hope you enjoy it and find it relevant.
 
 Stumbled upon this repo? [Find out more about Accurx](https://www.accurx.com/careers)
 
-The purpose of this exercise is for us to learn about how you analyse requirements, solve problems, use language features appropriately, structure code and verify your solution works correctly. These are the main factors we take into account when assessing your solution.
+The purpose of this exercise is for us to learn about how you analyse requirements, solve problems, use language features appropriately, structure code, and verify your solution works correctly. These are the main factors we take into account when assessing your solution.
 
 Feel free to spend as much or as little on the exercise as you like, we recommend 2-3 hours. Just let us know in your answers how much time you had available and what you would do with more time, we'll take that into account when assessing your solution.
 
@@ -27,16 +27,16 @@ Thanks for your time, we hope you enjoy the exercise and please do get in touch 
 
 To release software to many hundreds of thousands of clinicians multiple times a week, our component for downloading updates needs to be reliable in the challenging networking conditions clinicians can face: intermittent internet disconnection and slow internet speeds. We would like you to update the skeleton project in this repo to provide a way for clinicians to download our software in multiple situations.
 
-In this task, performing a normal GET on a file won't be reliable for two reasons. Firstly, we need to be able to recover from internet disconnections. Secondly, we need to not have to start from scratch every time, with intermittent internet disconnection and slow internet, it's unlikely we'll be able to download the whole file in one go. Luckily, some CDNs support downloading partial content so if we can get part of the way through, we can resume from this point. If the URL does not support partial content then we attempt to just download the whole file.
+In this task, performing a normal GET request on a file won't be reliable for two reasons. Firstly, we need to be able to recover from internet disconnections. Secondly, we need to not have to start from scratch every time, with intermittent internet disconnection and slow internet, it's unlikely we'll be able to download the whole file in one go. Luckily, some CDNs support downloading partial content so if we can get part of the way through, we can resume from this point. If the URL does not support partial content then we attempt to just download the whole file.
 
 Your solution should meet the following core requirements:
-- Download the installer even when internet disconnections occur. (We use 2 minutes as a disconnection time benchmark for this)
-- Implement partial downloading so that we don’t need to start from scratch every time, if the CDN supports this.
-- Implement downloading the file in one go, if the CDN does not support partial downloading.
-- Recover from failures and not exit until the file has been successfully downloaded, as clinicians need to eventually receive new updates as they're sent out, even if it takes many attempts due to their internet connection. 
-- Check the integrity of the file after downloading and delete the file if this check fails. We can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
-- Report progress to the user during this process.
-- Add the ability to cancel so the user can stop any in progress downloads.
+- Download the installer even when internet disconnections occur (we use 2 minutes as a disconnection time benchmark for this)
+- Implement partial downloading so that we don’t need to start from scratch every time, if the CDN supports this
+- Implement downloading the file in one go, if the CDN does not support partial downloading
+- Recover from failures and not exit until the file has been successfully downloaded
+- Check the integrity of the file after downloading and delete the file if this check fails. You can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
+- Report progress to the user throughout the download
+- Add the ability to cancel so the user can stop any in progress downloads
 
 
 We are looking for you to demonstrate:
@@ -50,19 +50,19 @@ If you feel that modifying the skeleton project would create a better solution t
 
 ### .NET 
 
-There is already a ```IWebSystemCalls.cs``` and corresponding implementation which allows you to get the http headers for a URL, download the whole content or download the partial content. All these calls return ```HttpResponseMessage``` which contains sub properties for headers and the content to be read as a string/stream etc.
+There is already a ```IWebSystemCalls.cs``` and corresponding implementation which allows you to get the HTTP headers for a URL, download the whole content, or download the partial content. All these calls return an ```HttpResponseMessage``` object which contains properties for headers and the content.
 
-As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the http header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
+As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the HTTP header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
 
-A test project is included (with Nunit added though can be swapped for XUnit) if Unit tests are wanted. There is also a Program Main function which has a real Accurx url (which DOES support partial content) and an example of a file path so that the code can be tested for real.
+An NUnit test project is included if you would like to add unit tests - feel free to swap out NUnit for any other test framework you may prefer. There is also a Program Main function which has a real Accurx URL (which **DOES** support partial content) and an example of a file path so that the code can be tested for real.
 
 ### Java
 
-There is already a ```WebSystemCalls.java``` and corresponding implementation which allows you to get the http headers for a URL, download the whole content or download the partial content. All these calls return an ```HttpResponse``` object, which contains sub properties for headers and the content.
+There is already a ```WebSystemCalls.java``` and corresponding implementation which allows you to get the HTTP headers for a URL, download the whole content or download the partial content. All these calls return an ```HttpResponse``` object, which contains sub properties for headers and the content.
 
-As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the http header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
+As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the HTTP header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
 
-A test project is included (with JUnit added though can be swapped for an alternative) if Unit tests are wanted. There is also an App Main function which has a real Accurx url (which DOES support partial content) and an example of a file path so that the code can be tested for real.
+A test project is included (with JUnit added though can be swapped for an alternative) if Unit tests are wanted. There is also an App Main function which has a real Accurx URL (which **DOES** support partial content) and an example of a file path so that the code can be tested for real.
 
 ## Tips
 
