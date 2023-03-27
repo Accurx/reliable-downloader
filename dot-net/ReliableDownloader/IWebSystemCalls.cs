@@ -18,7 +18,7 @@ public interface IWebSystemCalls
     /// </summary>
     /// <param name="url">The URL to download content from.</param>
     /// <param name="token">A cancellation token to allow request cancellation.</param>
-    Task<HttpResponseMessage> DownloadContent(string url, CancellationToken token);
+    Task<HttpResponseMessage> DownloadContentAsync(string url, CancellationToken token);
 
     /// <summary>
     /// Makes an HTTP GET request with a byte range specified to allow downloading partial content, if supported.
@@ -27,5 +27,5 @@ public interface IWebSystemCalls
     /// <param name="from">The position (in bytes) of the file to start sending data.</param>
     /// <param name="to">The position (in bytes) of the file to stop sending data.</param>
     /// <param name="token">A cancellation token to allow request cancellation.</param>
-    Task<HttpResponseMessage> DownloadPartialContent(string url, long from, long to, CancellationToken token);
+    Task<HttpResponseMessage> DownloadPartialContentAsync(string url, long from, long to, CancellationToken token);
 }
