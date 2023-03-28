@@ -11,8 +11,8 @@ public class WebSystemCalls : IWebSystemCalls
 
     public async Task<HttpResponseMessage> GetHeadersAsync(string url, CancellationToken token)
     {
-        using var request = new HttpRequestMessage(HttpMethod.Head, url);
-        return await _client.SendAsync(request, token).ConfigureAwait(continueOnCapturedContext: false);
+        using var httpRequestMessage = new HttpRequestMessage(HttpMethod.Head, url);
+        return await _client.SendAsync(httpRequestMessage, token).ConfigureAwait(continueOnCapturedContext: false);
     }
 
     public async Task<HttpResponseMessage> DownloadContentAsync(string url, CancellationToken token)
