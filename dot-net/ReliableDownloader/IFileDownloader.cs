@@ -1,19 +1,20 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ReliableDownloader;
 
 public interface IFileDownloader
 {
-    /// <summary>Downloads a file, trying to use reliable downloading if possible</summary>
-    /// <param name="contentFileUrl">The url which the file is hosted at</param>
-    /// <param name="localFilePath">The local file path to save the file to</param>
-    /// <param name="onProgressChanged">An action to call which prints progress</param>
-    /// <returns>True or false, depending on if download completes and writes to file system okay</returns>
-    Task<bool> DownloadFile(string contentFileUrl, string localFilePath, Action<FileProgress> onProgressChanged);
-        
-    /// <summary>
-    /// Cancels any in progress downloads
-    /// </summary>
-    void CancelDownloads();
+    /// <summary>Attempts to download a file and write it to the file system.</summary>
+    /// <param name="contentFileUrl">The URL of the file to download.</param>
+    /// <param name="localFilePath">The file path to persist the downloaded file to.</param>
+    /// <param name="onProgressChanged">An action that is invoked with the latest download progress.</param>
+    /// <param name="cancellationToken">A cancellation token to cancel the download.</param>
+    /// <returns>True if the download completes and writes to the file system successfully, otherwise false.</returns>
+    Task<bool> TryDownloadFile(
+        string contentFileUrl,
+        string localFilePath,
+        Action<FileProgress> onProgressChanged,
+        CancellationToken cancellationToken);
 }

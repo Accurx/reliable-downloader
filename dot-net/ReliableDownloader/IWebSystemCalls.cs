@@ -6,17 +6,26 @@ namespace ReliableDownloader;
 
 public interface IWebSystemCalls
 {
-    /// <summary>Does an HTTP HEAD REST call to just get the headers for a URL</summary>
+    /// <summary>
+    /// Makes an HTTP HEAD request to get the response headers for a URL.
+    /// </summary>
+    /// <param name="url">The URL to make the request to.</param>
+    /// <param name="token">A cancellation token to allow request cancellation.</param>
     Task<HttpResponseMessage> GetHeadersAsync(string url, CancellationToken token);
+
     /// <summary>
-    /// Does a simple HTTP GET to download content from a URL
+    /// Makes an HTTP GET request to download content from a URL.
     /// </summary>
-    Task<HttpResponseMessage> DownloadContent(string url, CancellationToken token);
+    /// <param name="url">The URL to download content from.</param>
+    /// <param name="token">A cancellation token to allow request cancellation.</param>
+    Task<HttpResponseMessage> DownloadContentAsync(string url, CancellationToken token);
+
     /// <summary>
-    /// Does a HTTP GET but with a range specified to download partial content (if supported)
+    /// Makes an HTTP GET request with a byte range specified to allow downloading partial content, if supported.
     /// </summary>
-    /// <param name="from">From value, in bytes</param>
-    /// <param name="to">From value, in bytes</param>
-    /// <returns></returns>
-    Task<HttpResponseMessage> DownloadPartialContent(string url, long from, long to, CancellationToken token);
+    /// <param name="url">The URL to download content from.</param>
+    /// <param name="from">The position (in bytes) of the file to start sending data.</param>
+    /// <param name="to">The position (in bytes) of the file to stop sending data.</param>
+    /// <param name="token">A cancellation token to allow request cancellation.</param>
+    Task<HttpResponseMessage> DownloadPartialContentAsync(string url, long from, long to, CancellationToken token);
 }
