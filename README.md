@@ -46,7 +46,7 @@ We would like you to update the skeleton project in this repository to provide a
 A high-quality submission will have the following:
 - Meet the requirements above
 - Appropriate use of language features to solve the problem in a neat and simple way
-- Well structured code
+- Code that is easy to read and reason about. Typically using software design principles like SOLID.
 - Unit tests
 
 _If you feel that modifying the skeleton project would create a better solution to these requirements, we encourage you to do so. We currently support submissions in either .NET (C#) or Java and have included skeleton projects for both._
