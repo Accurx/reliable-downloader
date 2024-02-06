@@ -62,4 +62,4 @@ _If you feel that modifying the skeleton project would create a better solution 
 - You can throttle your internet connection using NetLimiter or similar.
 - You can simulate internet disconnections by disconnecting wifi/ethernet.
 - Different behaviours occur after following different periods of disconnection, two seconds and two minutes are sweet spots for exercising key failure modes.
-- The use of NuGet packages/third-party libraries is fine, however, do bear in mind that overusing these limits your ability to show off!
+- The use of third-party libraries is fine, however, do bear in mind that overusing these may limit your ability to demonstrate your skills
