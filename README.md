@@ -45,7 +45,7 @@ We would like you to update the skeleton project in this repository to provide a
 ### What does a successful submission look like?
 A high-quality submission will have the following:
 - Meet the requirements above
-- Appropriate use of language features to solve the problem in a neat and simple way
+- Appropriate use of language features to solve the problem in a simple way
 - Code that is easy to read and reason about. Typically using software design principles like SOLID.
 - Unit tests
 
