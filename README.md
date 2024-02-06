@@ -48,7 +48,7 @@ We would like you to update the skeleton project in this repository to provide a
 A high-quality submission will have the following:
 - Meet the requirements above
 - Appropriate use of language features to solve the problem in a simple way
-- Code that is easy to read and reason about.
+- Code that is easy to read and reason about
 - Unit tests
 
 _If you feel that modifying the skeleton project would create a better solution to these requirements, we encourage you to do so. We currently support submissions in either .NET (C#) or Java and have included skeleton projects for both._
@@ -56,11 +56,11 @@ _If you feel that modifying the skeleton project would create a better solution 
 
 ## Tips
 
-- Take the time to read through the task and description. There's guidance in there that can be helpful to approaching the problem.
-- Try writing down some example inputs and outputs on paper.
-- Try a brute force approach and then optimise the code.
-- Add some comments to your code if you think it will be helpful to share your thought process to someone assessing it.
-- You can throttle your internet connection using NetLimiter or similar.
-- You can simulate internet disconnections by disconnecting wifi/ethernet.
-- Different behaviours occur after following different periods of disconnection, two seconds and two minutes are sweet spots for exercising key failure modes.
-- The use of third-party libraries is fine, however, do bear in mind that overusing these may limit your ability to demonstrate your skills.
+- Take the time to read through the task and description. There's guidance in there that can be helpful to approaching the problem
+- Try writing down some example inputs and outputs on paper
+- Try a brute force approach and then optimise the code
+- Add some comments to your code if you think it will be helpful to share your thought process to someone assessing it
+- You can throttle your internet connection using NetLimiter or similar
+- You can simulate internet disconnections by disconnecting wifi/ethernet
+- Different behaviours occur after following different periods of disconnection, two seconds and two minutes are sweet spots for exercising key failure modes
+- The use of third-party libraries is fine, however, do bear in mind that overusing these may limit your ability to demonstrate your skills
