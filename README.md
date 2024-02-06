@@ -12,14 +12,15 @@ So we get an insight into how you:
 * Utilise language features, structure code and tests to verify your solution meets user requirements. 
 
 ### What is expected of you?
-1. Please complete the task detailed below👇
+ **Please complete the task detailed below**👇
 
-2. Please answer the following questions in `questions.md`
+**Please answer the following questions in `questions.md`**
    - How did you approach solving the problem?
    - How did you verify your solution works correctly?
    - How long did you spend on the exercise?
    - What would you add if you had more time and how?
-4. When you're finished please:
+     
+ **When you're finished please:**
    - Download your solution including your completed `questions.md` file (in GitHub, at the route of your repository, click Code -> Download Zip)
    - Submit your zipped solution, using the link in your invite email.
 
