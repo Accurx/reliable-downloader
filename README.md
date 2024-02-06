@@ -1,77 +1,66 @@
 # 👩‍⚕️ Reliable Downloader Exercise 🖥️
 
-Thank you for investing your time in our take home exercise.
+[Find out more about Accurx](https://www.accurx.com/careers)
 
-We've based this exercise on a real problem we've had to solve in order to be able to release our [desktop software](https://www.youtube.com/channel/UCrLJDyngP4p0G0JtgEoT66Q/videos), which allows clinicians to communicate with patients over text, video, questionnaires, and other methods to many hundreds of thousands of users multiple times a week.
+Thank you for investing your time in our take-home exercise.
 
-We hope you enjoy it and find it relevant.
+We've based this exercise on a real problem we've had to solve to be able to release our desktop software, which allows clinicians to communicate with patients over text, video, questionnaires, and other methods to hundreds of thousands of users multiple times a week.
 
-Stumbled upon this repo? [Find out more about Accurx](https://www.accurx.com/careers)
+### Why have we set this exercise?
+So we get an insight into how you:
+* Understand and  analyse requirements to solve real user problems
+* Utilise language features, structure code and tests to verify your solution meets user requirements. 
 
-The purpose of this exercise is for us to learn about how you analyse requirements, solve problems, use language features appropriately, structure code, and verify your solution works correctly. These are the main factors we take into account when assessing your solution.
+### What is expected of you?
+ **Please complete the task detailed below**👇
 
-Feel free to spend as much or as little on the exercise as you like, we recommend 2-3 hours. Just let us know in your answers how much time you had available and what you would do with more time, we'll take that into account when assessing your solution.
+**Please answer the following questions in `questions.md`**
+   - How did you approach solving the problem?
+   - How did you verify your solution works correctly?
+   - How long did you spend on the exercise?
+   - What would you add if you had more time and how?
+     
+ **When you're finished please:**
+   - Download your solution including your completed `questions.md` file (in GitHub, at the route of your repository, click Code -> Download Zip)
+   - Submit your zipped solution, using the link in your invite email.
 
-Please answer the following questions in `questions.md`.
-
-- How did you approach solving the problem?
-- How did you verify your solution works correctly?
-- How long did you spend on the exercise?
-- What would you add if you had more time and how?
-
-When you're finished, please download your solution including your completed `questions.md` file (in GitHub, at the route of your repository, click Code -> Download Zip) and using the link in your invite email, submit your zipped solution.
-
-Thanks for your time, we hope you enjoy the exercise and please do get in touch if you have any questions!
+_Please feel free to add any feedback you have on this exercise in the submission `feedback.md`_
 
 ## Task
+### Context
+The component that clinicians use for  downloading updates needs to be reliable in the unreliable network conditions they work with; often facing intermittent internet disconnection and slow internet speeds.
 
-To release software to many hundreds of thousands of clinicians multiple times a week, our component for downloading updates needs to be reliable in the challenging networking conditions clinicians can face: intermittent internet disconnection and slow internet speeds. We would like you to update the skeleton project in this repo to provide a way for clinicians to download our software in multiple situations.
+We would like you to update the skeleton project in this repository to provide a way for clinicians to download our software given multiple network conditions. Details can be found in the requirements section below. 
 
-In this task, performing a normal GET request on a file won't be reliable for two reasons. Firstly, we need to be able to recover from internet disconnections. Secondly, we need to not have to start from scratch every time; with intermittent internet disconnection and slow internet, it's unlikely we'll be able to download the whole file in one go. Luckily, some CDNs support downloading partial content so if we can get part of the way through, we can resume from this point. If the URL does not support partial content then we attempt to download the whole file.
+### Requirements
 
-Your solution should meet the following core requirements:
-- Download the installer, even when internet disconnections occur (we use 2 minutes as a disconnection time benchmark for this)
-- Implement partial downloading so that we don’t need to start from scratch every time, if the CDN supports this
-- Implement downloading the file in one go, if the CDN does not support partial downloading
-- Recover from failures and not exit until the file has been successfully downloaded
-- Check the integrity of the file after downloading and delete the file if this check fails. You can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
-- Report progress to the user throughout the download
-- Add the ability to cancel the download
+1. The installer downloads in the following scenarios:
+   - The download is successful if the internet connection is lost for up to two minutes
+   - The downloader should timeout if the internet connection is lost for more than two minutes
+   - Partial downloading. So that the download doesn't need to start from scratch every time if the CDN supports this
+   - Downloading the file in one go, if the CDN does not support partial downloading
+3. The system can recover from failures and not exit until the file has been successfully downloaded
+4. The file is deleted if the integrity check fails after downloading. You can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
+5. Progress is reported to the user throughout the download
+6. The user can cancel the download
 
+### What does a successful submission look like?
+A high-quality submission will have the following:
+- Meet the requirements above
+- Appropriate use of language features to solve the problem in a simple way
+- Code that is easy to read and reason about
+- Unit tests
 
-We are looking for you to demonstrate:
-- Analysing requirements
-- Solving problems
-- Using language features appropriately
-- Structuring code
-- Verifying your solution works correctly
+_If you feel that modifying the skeleton project would create a better solution to these requirements, we encourage you to do so. We currently support submissions in either .NET (C#) or Java and have included skeleton projects for both._
 
-If you feel that modifying the skeleton project would create a better solution to these requirements, we encourage you to do so. We currently support submissions in either .NET (C#) or Java and have included skeleton projects for both.
-
-### .NET 
-
-There is already a ```IWebSystemCalls.cs``` and corresponding implementation which allows you to get the HTTP headers for a URL, download the whole content, or download partial content. All these calls return an ```HttpResponseMessage``` object which contains properties for headers and the content.
-
-As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the HTTP header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
-
-An NUnit test project is included if you would like to add unit tests - feel free to swap out NUnit for any other test framework you may prefer. There is also a Program Main function which has a real Accurx URL (which **DOES** support partial content) and an example of a file path so that the code can be tested for real.
-
-### Java
-
-There is already a ```WebSystemCalls.java``` and corresponding implementation which allows you to get the HTTP headers for a URL, download the whole content or download the partial content. All these calls return an ```HttpResponse``` object, which contains sub properties for headers and the content.
-
-As in the example here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges, the HTTP header "Accept Ranges" will be set to "Bytes" if the CDN supports partial content.
-
-A test project is included (with JUnit added though can be swapped for an alternative) if Unit tests are wanted. There is also an App Main function which has a real Accurx URL (which **DOES** support partial content) and an example of a file path so that the code can be tested for real.
 
 ## Tips
 
-- Take the time to read through the task and description. There's guidance in there that can be helpful to approaching the problem.
-- The code doesn't need to be perfect but it needs to be readable.
-- Try writing down some example input and outputs on paper.
-- Try a brute force approach and then optimise the code.
-- Add some comments to your code if you think it will be helpful to share your thought process to someone assessing it.
-- You can throttle your internet connection using NetLimiter or similar.
-- You can simulate internet disconnections through disconnecting wifi/ethernet.
-- Different behaviours occur after following different periods of disconnection, two seconds and two minutes are sweet spots for exercising key failure modes.
-- Usage of NuGet packages/third party libraries is fine, however do bear in mind that overusing these limits your ability to show off!
+- Take the time to read through the task and description. There's guidance in there that can be helpful to approaching the problem
+- Try writing down some example inputs and outputs on paper
+- Try a brute force approach and then optimise the code
+- Add some comments to your code if you think it will be helpful to share your thought process to someone assessing it
+- You can throttle your internet connection using NetLimiter or similar
+- You can simulate internet disconnections by disconnecting wifi/ethernet
+- Different behaviours occur after following different periods of disconnection, two seconds and two minutes are sweet spots for exercising key failure modes
+- The use of third-party libraries is fine, however, do bear in mind that overusing these may limit your ability to demonstrate your skills
