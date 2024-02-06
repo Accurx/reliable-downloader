@@ -35,13 +35,14 @@ We would like you to update the skeleton project in this repository to provide a
 ### Requirements
 
 1. The installer downloads in the following scenarios:
-   - When internet disconnections occur (we use 2 minutes as a disconnection time benchmark for this)
+   - The download is successful if the internet connection is lost for up to two minutes
+   - The downloader should timeout if the internet connection is lost for more than two minutes
    - Partial downloading. So that the download doesn't need to start from scratch every time if the CDN supports this
    - Downloading the file in one go, if the CDN does not support partial downloading
-2. The system can recover from failures and not exit until the file has been successfully downloaded
-3. The file is deleted if the integrity check fails after downloading. You can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
-4. Progress is reported to the user throughout the download
-5. The user can cancel the download
+3. The system can recover from failures and not exit until the file has been successfully downloaded
+4. The file is deleted if the integrity check fails after downloading. You can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
+5. Progress is reported to the user throughout the download
+6. The user can cancel the download
 
 ### What does a successful submission look like?
 A high-quality submission will have the following:
