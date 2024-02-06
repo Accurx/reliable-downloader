@@ -57,11 +57,10 @@ _If you feel that modifying the skeleton project would create a better solution 
 ## Tips
 
 - Take the time to read through the task and description. There's guidance in there that can be helpful to approaching the problem.
-- The code doesn't need to be perfect but it needs to be readable.
 - Try writing down some example inputs and outputs on paper.
 - Try a brute force approach and then optimise the code.
 - Add some comments to your code if you think it will be helpful to share your thought process to someone assessing it.
 - You can throttle your internet connection using NetLimiter or similar.
 - You can simulate internet disconnections by disconnecting wifi/ethernet.
 - Different behaviours occur after following different periods of disconnection, two seconds and two minutes are sweet spots for exercising key failure modes.
-- The use of third-party libraries is fine, however, do bear in mind that overusing these may limit your ability to demonstrate your skills
+- The use of third-party libraries is fine, however, do bear in mind that overusing these may limit your ability to demonstrate your skills.
