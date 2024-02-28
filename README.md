@@ -34,12 +34,10 @@ We would like you to update the skeleton project in this repository to provide a
 
 ### Requirements
 
-1. The installer downloads in the following scenarios:
-   - The download is successful if the internet connection is lost for up to two minutes
-   - The downloader should timeout if the internet connection is lost for more than two minutes
-   - Partial downloading. So that the download doesn't need to start from scratch every time if the CDN supports this
+1. The program should not terminate until the download has been completed successfully. This means that it should be resilient to:
+   - Internet disconnections of any length (from a couple of seconds to over two minutes) 
+   - Partial downloading. So that the download doesn't need to start from scratch every time if the CDN supports this.
    - Downloading the file in one go, if the CDN does not support partial downloading
-3. The system can recover from failures and not exit until the file has been successfully downloaded
 4. The file is deleted if the integrity check fails after downloading. You can use the Content-MD5 for this: https://www.oreilly.com/library/view/http-the-definitive/1565925092/re17.html
 5. Progress is reported to the user throughout the download
 6. The user can cancel the download
