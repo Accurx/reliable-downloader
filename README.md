@@ -52,10 +52,11 @@ A high-quality submission will:
 
 ## The Task
 
-Clinicans are faced with unreliable network conditions including intermittent disconnection and low bandwidth.  The downloader they use to get the latest updates to our desktop app needs to work reliably in these challenging conditions.
+Clinicians are faced with unreliable network conditions including intermittent disconnection and low bandwidth.  The downloader they use to get the latest updates to our desktop app needs to work reliably in these challenging conditions.
 
 We've provided a basic implementation of the downloader that downloads a file from a URL to disk and verifies its integrity.  Your challenge is to extend it to:
 
 1. be resilient to network disconnections of _any_ length (from a couple of seconds to over two minutes)
 2. where the CDN supports [range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges), download the file in chunks and
 3. pick up where it left off if the user restarts the installer
+4. ensure the downloaded file is valid before the download is considered complete
