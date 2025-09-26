@@ -10,6 +10,7 @@ import java.nio.file.Path;
 public class Program {
 
     private static final FileDownloadSettings downloadSettings = new FileDownloadSettings(
+            // replace the URL below with https://web.accurx.com/api/desktop/download/unreliable to test against the unreliable server
             URI.create("https://installer.accurx.com/chain/4.22.50587.0/accuRx.Installer.Local.msi"),
             Path.of("myfirstdownload.msi")
     );
