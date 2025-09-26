@@ -60,5 +60,4 @@ We've provided a basic implementation of the downloader that downloads a file fr
 2. where the CDN supports [range requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Ranges), download the file in chunks and
 3. pick up where it left off if the user restarts the installer
 4. ensure the downloaded file is valid before the download is considered complete
-
-you can test your tasks against the unreliable server [url](https://web.dev.accurx.com/api/desktop/download/unreliable?delay=<milliseconds>) which simulates the various unreliable testing conditions
+5. you can test your solution against the download [url](https://web.dev.accurx.com/api/desktop/download/unreliable?delay=<milliseconds>) which simulates the various unreliable testing conditions
