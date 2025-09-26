@@ -10,7 +10,7 @@ import java.nio.file.Path;
 public class Program {
 
     private static final FileDownloadSettings downloadSettings = new FileDownloadSettings(
-            // replace the URL below with https://web.dev.accurx.com/api/desktop/download/unreliable to test against the unreliable server
+            // Replace the URL below with https://web.dev.accurx.com/api/desktop/download/unreliable?delay=<milliseconds> to test against the unreliable server. You can adjust the optional delay parameter by replacing <milliseconds> with the number of milliseconds you want to simulate between responses in the stream.
             URI.create("https://installer.accurx.com/chain/4.22.50587.0/accuRx.Installer.Local.msi"),
             Path.of("myfirstdownload.msi")
     );
